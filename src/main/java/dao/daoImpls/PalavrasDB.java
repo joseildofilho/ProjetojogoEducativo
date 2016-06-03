@@ -1,4 +1,4 @@
-package dao.daoImplDB;
+package dao.daoImpls;
 
 import fabricas.FabricaDeManagers;
 import dao.exception.JaExisteIDCadastrado;

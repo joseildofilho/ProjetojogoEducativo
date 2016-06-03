@@ -6,7 +6,7 @@ import fachadas.FachadaDao;
 import java.util.List;
 
 /**
- * Created by joseildo on 19/05/16.
+ * Classe responsavel por encapsular a sereliazação dos objetos para JSON
  */
 public class Serializador {
 

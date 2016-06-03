@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class RecursoCriar implements Recurso {
 
+    //todo refatorar interação dos recursos
     private String typedata;
     public RecursoCriar() {
 
@@ -19,7 +20,6 @@ public class RecursoCriar implements Recurso {
         doGet();
         System.out.println("executando o run com a typedata de valor:"+typedata);
     }
-
 
     private void doGet() {
         StringBuilder sb = new StringBuilder();

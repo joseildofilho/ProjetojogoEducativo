@@ -1,11 +1,20 @@
-package dao.daoImplDB.FerramentaGravacao;
+package dao.daoImpls.FerramentaGravacao;
 
 import java.io.*;
 
 /**
- * Created by joseildo on 19/05/16.
+ * @author Joseildo Filho
+ * @version 1.1
+ * @since 1.0
+ *
+ * Ferramenta de io em arquivos serializados, seus metodos são um pouco primitivos
+ * ate mesmo ineficientes, mas para aplicações simples é pode resolver o caso
+ * Possui a ideia de CRUD porem sem o U (update), onde essa tarefa fica a cargo do implmentador
+ * Elasempre sobreescrevara o arquivo com mesmo nome
+ * @see FerramentaGravacao
+ * @see Serializable
  */
-public class IOTool <T> implements FerramentaGravacao <T>{
+public class IOToolFile<T> implements FerramentaGravacao <T>{
 
     private boolean exists(final String NOME) {
         return new File(NOME).exists();

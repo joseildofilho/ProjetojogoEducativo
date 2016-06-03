@@ -32,9 +32,8 @@ public class RESTAnalyzer {
         this.pedacosURI = url.split("/");
         System.out.println(this.request.getRequestURL().toString());
     }
-
+    //todo encapsular este metodo para que o usuario do servlet precise apenas passar o Http
     public void analyzeGET() {
         gerenteRecursos.executeRecurso(pedacosURI);
-        return;
     }
 }

@@ -1,7 +1,7 @@
-package dao.daoImplDB;
+package dao.daoImpls;
 
-import dao.daoImplDB.FerramentaGravacao.FerramentaGravacao;
-import dao.daoImplDB.FerramentaGravacao.IOTool;
+import dao.daoImpls.FerramentaGravacao.FerramentaGravacao;
+import dao.daoImpls.FerramentaGravacao.IOToolFile;
 import dao.exception.JaExisteIDCadastrado;
 import dao.exception.NaoExistePalavraException;
 import dao.interfaces.PalavrasDao;
@@ -14,17 +14,21 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by joseildo on 19/05/16.
+ * @author Joseildo Filho
+ * @version 1.0
+ * @since 1.0
+ *
+ * Logica de gravação das entidades palavras
  */
 public class PalavrasArquivo implements PalavrasDao {
 
     private Map<String, Palavra> mapPalavras;
-    private transient FerramentaGravacao<Map<String, Palavra>> io;
-    private transient static final String NOME_ARQUIVO = "palavras.pj";
+    private FerramentaGravacao<Map<String, Palavra>> io;
+    private static final String NOME_ARQUIVO = "palavras.pj";
 
     public PalavrasArquivo() {
         this.mapPalavras = new HashMap<>();
-        io = new IOTool<>();
+        io = new IOToolFile<>();
     }
 
     @Override

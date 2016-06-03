@@ -7,7 +7,11 @@ import entidades.Palavra;
 import java.util.List;
 
 /**
- * Created by joseildo on 19/05/16.
+ * @author Joseildo Filho
+ * @version 1.0
+ * @since 1.0
+ *
+ *  Interface para implementação do dao que controlara as palavras
  */
 public interface PalavrasDao {
     void updatePalavra(String id, Palavra palavra);

@@ -8,8 +8,6 @@ import entidades.Serializador;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.validation.constraints.AssertTrue;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -85,7 +83,7 @@ public class FachadaDaoTeste {
 
     @Test(expected = NaoExistePalavraException.class)
     public void readPalavraTest() throws NaoExistePalavraException {
-        assertEquals(fachada.readPalavra(palavra1.getPalavra()), palavra1);
+            assertEquals(fachada.readPalavra(palavra1.getPalavra()), palavra1);
         assertEquals(fachada.readPalavra(palavra2.getPalavra()), palavra2);
         assertEquals(fachada.readPalavra(palavra3.getPalavra()), palavra3);
         fachada.deletePalavra(palavra1.getPalavra());

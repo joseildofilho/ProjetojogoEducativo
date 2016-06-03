@@ -9,17 +9,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by root on 02/06/16.
+ * Servlet que sera usada como interface de contato da aplicação externa
  */
 @WebServlet(name = "JogoServlet",value = "/jogo/*")
 public class JogoServlet extends HttpServlet {
 
     protected void doPut(HttpServletRequest request, HttpServletResponse response) throws javax.servlet.ServletException,IOException {
-        response.getWriter().print("Imprimendo algum valor PUT");
+        response.sendError(501);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-        response.getWriter().print("Imprimendo algum valor POST");
+        response.sendError(501);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws javax.servlet.ServletException, IOException {

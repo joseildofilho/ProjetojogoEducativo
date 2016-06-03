@@ -1,6 +1,6 @@
 package fachadas;
 
-import dao.daoImplDB.PalavrasArquivo;
+import dao.daoImpls.PalavrasArquivo;
 import dao.exception.JaExisteIDCadastrado;
 import dao.exception.NaoExistePalavraException;
 import dao.interfaces.PalavrasDao;
@@ -9,7 +9,8 @@ import entidades.Palavra;
 import java.util.List;
 
 /**
- * Created by joseildo on 19/05/16.
+ * Fachada que traz do baixo nivel as classes para a logica do negocio
+ * Reunindo todos os metodos dos daos
  */
 public class FachadaDao {
 
